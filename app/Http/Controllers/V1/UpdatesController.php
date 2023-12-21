@@ -29,6 +29,16 @@ class UpdatesController extends Controller
                         'title' => 'Title2',
                         'description' => 'Description2',
                         'href' => 'https://stellarsecurity.com'
+                    ],
+                    [
+                        'title' => 'Title3',
+                        'description' => 'Description3',
+                        'href' => 'https://stellarsecurity.com'
+                    ],
+                    [
+                        'title' => 'Title4',
+                        'description' => 'Description4',
+                        'href' => 'https://stellarsecurity.com'
                     ]
                 ]
         ];
