@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 class UpdatesController extends Controller
 {
 
-    public function updates(Request $request)
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updates(Request $request): \Illuminate\Http\JsonResponse
     {
 
         $last_update_time = $request->input('last_update_time');
