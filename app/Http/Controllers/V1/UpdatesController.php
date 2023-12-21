@@ -23,22 +23,26 @@ class UpdatesController extends Controller
                     [
                         'title' => 'Title',
                         'description' => 'Description',
-                        'href' => 'https://stellarsecurity.com'
+                        'href' => 'https://stellarsecurity.com',
+                        'date' => '2023-12-12'
                     ],
                     [
                         'title' => 'Title2',
                         'description' => 'Description2',
-                        'href' => 'https://stellarsecurity.com'
+                        'href' => 'https://stellarsecurity.com',
+                        'date' => '2023-12-12'
                     ],
                     [
                         'title' => 'Title3',
                         'description' => 'Description3',
-                        'href' => 'https://stellarsecurity.com'
+                        'href' => 'https://stellarsecurity.com',
+                        'date' => '2023-12-12'
                     ],
                     [
                         'title' => 'Title4',
                         'description' => 'Description4',
-                        'href' => 'https://stellarsecurity.com'
+                        'href' => 'https://stellarsecurity.com',
+                        'date' => '2023-12-12'
                     ]
                 ]
         ];
