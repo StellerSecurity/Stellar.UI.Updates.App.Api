@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::prefix('v1')->group(function () {
+
+    Route::prefix('updatescontroller')->group(function () {
+        Route::controller(\App\Http\Controllers\V1\UpdatesController::class)->group(function () {
+            Route::get('/updates', 'updates');
+        });
+    });
+
 });
