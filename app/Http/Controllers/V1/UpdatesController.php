@@ -53,6 +53,11 @@ class UpdatesController extends Controller
           'message' => 'kar'
         ];
 
+        $response['last_update'] = [
+            'time' => time(),
+            'date' => date("Y-m-d H:i:s")
+        ];
+
         return response()->json($response);
 
     }
