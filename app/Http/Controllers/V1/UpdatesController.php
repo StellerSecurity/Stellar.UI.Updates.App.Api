@@ -25,13 +25,13 @@ class UpdatesController extends Controller
                         'description' => 'Stellar Phone - Pixel 5a is out. Check it out here.',
                         'href' => 'https://stellarsecurity.com',
                         'date' => '2023-12-12',
-                        'read' => false,
+                        'read' => true,
                     ]
                 ]
         ];
 
         $response['notification'] = [
-          'send' => true,
+          'send' => false,
           'title' => 'Updates',
           'message' => 'kar'
         ];
