@@ -26,6 +26,13 @@ class UpdatesController extends Controller
                         'href' => 'https://stellarsecurity.com',
                         'date' => '2023-12-12',
                         'read' => true,
+                    ],
+                    [
+                        'title' => 'Stellar Security',
+                        'description' => 'Stellar Phone - Pixel 9 is out',
+                        'href' => 'https://stellarsecurity.com/stellar-phone',
+                        'date' => '2024-11-11',
+                        'read' => true,
                     ]
                 ]
         ];
