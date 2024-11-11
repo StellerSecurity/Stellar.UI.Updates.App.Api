@@ -29,6 +29,13 @@ class UpdatesController extends Controller
                     ],
                     [
                         'title' => 'Stellar Security',
+                        'description' => 'Introducing Stellar Shield',
+                        'href' => 'https://stellarsecurity.com/stellar-shield',
+                        'date' => '2024-11-08',
+                        'read' => true,
+                    ],
+                    [
+                        'title' => 'Stellar Security',
                         'description' => 'Stellar Phone - Pixel 9 is out',
                         'href' => 'https://stellarsecurity.com/stellar-phone',
                         'date' => '2024-11-11',
