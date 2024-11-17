@@ -31,7 +31,7 @@ class UpdatesController extends Controller
 
             $response['items'][] = [
                 'title' => $post->title->rendered,
-                'description' =>$post->title->rendered,
+                'description' => '',
                 'date' => $post->date,
                 'href' => $post->link,
                 'read' => false
