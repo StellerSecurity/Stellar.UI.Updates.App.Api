@@ -4,7 +4,7 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Http;
 
 class UpdatesController extends Controller
 {
@@ -18,31 +18,28 @@ class UpdatesController extends Controller
 
         $last_update_time = $request->input('last_update_time');
 
-        $response = [
-                'items' => [
-                    [
-                        'title' => 'Stellar Security',
-                        'description' => 'Stellar Phone - Pixel 5a is out. Check it out here.',
-                        'href' => 'https://stellarsecurity.com',
-                        'date' => '2023-12-12',
-                        'read' => true,
-                    ],
-                    [
-                        'title' => 'Stellar Security',
-                        'description' => 'Introducing Stellar Shield',
-                        'href' => 'https://stellarsecurity.com/stellar-shield',
-                        'date' => '2024-11-08',
-                        'read' => true,
-                    ],
-                    [
-                        'title' => 'Stellar Security',
-                        'description' => 'Stellar Phone - Pixel 9 is out',
-                        'href' => 'https://stellarsecurity.com/stellar-phone',
-                        'date' => '2024-11-11',
-                        'read' => true,
-                    ]
-                ]
-        ];
+        $api_url = "https://blog.stellarsecurity.com/wp-json/wp/v2/posts";
+
+        $responsew = Http::get($api_url);
+
+
+        $data = [];
+
+
+
+        foreach($responsew->object() as $post) {
+
+            $response['items'][] = [
+                'title' => $post->title->rendered,
+                'description' =>$post->title->rendered,
+                'date' => $post->date,
+                'href' => $post->link,
+                'read' => false
+            ];
+
+        }
+
+
 
         $response['notification'] = [
           'send' => false,
